@@ -37,6 +37,51 @@
       //match() : 특정 텍스트를 문자열에서 찾아 배열의 형태로 반환, 정규표현식 사용 가능
       let str4 = "love you. love me. love everything";
       console.log(str4.match(/love/g)); // ['love', 'love', 'love'], g 플래그는 일치하는 모든 부분을 검색
+
+      //replace() : 문자열 내 일치하는 첫 번째 문자열을 찾고, 두번째 인수로 치환한 문자열을 반환
+      let str5 = "Hello World";
+      console.log(str5.replace("World", "kim")); // 'Hello Kim'
+
+      //slice() : 문자열의 일부분을 잘라내어 새로운 문자열로 반환
+      let str6 = "Hello World";
+      console.log(str6.slice(0, 5)); // 'Hello', 0번째 부터 5번째 이전 까지 잘라내어 반환
+      console.log(str5.slice(2)); // 'llo World', 2번째 부터 마지막 까지 잘라내어 반환
+      console.log(str5.slice(-5)); // 'World', 가장 맨 뒤에서부터 5자리를 잘라내어 반환
+
+      //substring() : slice 메서드와 동일하게 동작
+      //인수 < 0 또는 NaN인 경우 0으로 취급
+      let subStr = "Hello World!!!";
+      console.log(subStr.substring(-2)); // 'Hello World!!!'
+      //인수 > 문자열의 길이 경우 인수는 문자열의 길이로 취급
+      let subStr2 = "Hello World!!!";
+      console.log(subStr2.substring(1, 100)); // 'ello World!!!'
+
+      //split() : 문자열을 구분한 후 분리된 각 문자열로 이루어진 배열을 반환 (쪼갠다)
+      let str7 = "my name is Cheolsu Kim.";
+      // 공백으로 구분(단어로 구분)하여 배열로 반환
+      console.log(str7.split(" ")); //  ['my', 'name', 'is', 'Cheolsu', 'Kim.']
+      // 빈 문자열로 전달하면 각 문자를 모두 분리
+      console.log(str7.split("")); // ['m', 'y', ' ', 'n', 'a', 'm', 'e', ' ', 'i', 's', ' ', 'C', 'h', 'e', 'o', 'l', 's', 'u', ' ', 'K', 'i', 'm', '.']
+      // 배열의 길이를 지정
+      console.log(str7.split(" ", 3)); // ['my', 'name', 'is']
+      // 인수를 생략하면 문자열 전체를 단일 요소로 하는 배열을 반환
+      console.log(str7.split()); // ['my name is Cheolsu Kim.']
+
+      //toLowerCase() : 문자열을 소문자로 변경한 문자열을 반환
+      let str8 = "Hello World!";
+      console.log(str8.toLowerCase()); // 'hello world!'
+
+      //toUpperCase() : 문자열을 대문자로 변경한 문자열을 반환
+      let str9 = "Hello World!";
+      console.log(str9.toUpperCase()); // 'HELLO WORLD!'
+
+      //trim() : 문자열 앞뒤에 공백 문자를 제거한 문자열을 반환
+      let str10 = "   foo    ";
+      console.log(str10.trim());
+
+      //padStart() : 자릿수에 맞춰 값을 채움
+      let str11 = "99";
+      console.log(str11.padStart(5, "나")); // 나나나99, '99'를 5자리 채우는데 부족한 부분은 '나'로 채운다.
     </script>
   </body>
 </html>
