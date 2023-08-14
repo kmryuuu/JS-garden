@@ -9,9 +9,17 @@
 
   <body>
     <script>
+      // 0801 수업 예제
+      // 출력 문자열 1. CEO 홍길동 2. CTO 이호준
+      let test = "paullab CEO 이호준 CTO 홍길동";
+      let ceo = test.indexOf("CEO");
+      let cto = test.indexOf("CTO");
+      console.log(`1. CEO {$cto}`);
+
+      // ------- 코딩테스트
       // 원하는 문자열 찾기
       function solution(myString, pat) {
-        var answer = 0;
+        var answer = 0; // 초기값 설정
         const strLow = myString.toLowerCase();
         const patLow = pat.toLowerCase();
         if (strLow.includes(patLow)) {
@@ -24,6 +32,12 @@
 
       function solution(myString, pat) {
         return myString.toUpperCase().includes(pat.toUpperCase()) ? 1 : 0;
+      }
+
+      // 대문자로 바꾸기
+      function solution(myString) {
+        var answer = myString.toUpperCase();
+        return answer;
       }
     </script>
   </body>
