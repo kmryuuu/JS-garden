@@ -10,9 +10,47 @@
   <body>
     <script>
       // parseInt(), 문자열을 정수로 바꿔주는 함수
-      console.log(parseInt("123"));
+      console.log(parseInt("123")); // 123
       // toString(), 숫자를 문자열로 변환하여 반환
-      console.log((10).toString());
+      console.log((10).toString()); // '10'
+
+      // isNaN() : 암묵적 타입 변환하여 숫자 값이 NaN 인지 불리언 값으로 반환
+      // Number.isNaN() : 타입 변환하지 않아 숫자가 아닌 인수는 false를 반환해서 권장한다.
+      console.log(isNaN(undefined)); // true
+      console.log(Number.isNaN(undefined)); // false
+
+      // Math
+      // Math.PI : 원주율 PI값 반환
+      console.log(Math.PI);
+
+      // Math.abs() : 인수로 전달된 숫자의 절대값 반환 (절대값은 0 또는 양수)
+      console.log(Math.abs(-10)); // 10
+      console.log(Math.abs("")); // 0
+      console.log(Math.abs("string")); // NaN
+
+      // Math.round() : 인수로 전달된 숫자의 소수점 이하를 반올림한 정수를 반환
+      console.log(Math.round(1.6)); // 2
+      console.log(Math.round(-1.6)); // -2
+
+      // Math.ceil() : 인수로 전달된 숫자의 소수점 이하를 올림한 정수를 반환
+      console.log(Math.ceil(1.4)); // 2
+      console.log(Math.ceil(-1.4)); // -1
+
+      // Math.floor() : 인수로 전달된 숫자의 소수점 이하를 내림한 정수를 반환
+      console.log(Math.floor(1.4)); // 1
+      console.log(Math.floor(-1.4)); // -2
+
+      // Math.sqrt() : 인수로 전달된 숫자의 제곱근을 반환
+      console.log(Math.sqrt(9)); // 3
+      console.log(Math.sqrt(-9)); // NaN
+
+      // Math.random() : 0 ~ 1 사이의 실수를 랜덤으로 반환
+      console.log(Math.random()); // 0 ~ 0.999999999
+
+      const random = Math.floor(Math.random() * 10 + 1);
+      // 10을 곱해서 0 ~ 10 미만의 실수를 반환, 1을 더해서 0 ~ 11 미만의 실수 중 10 까지 반환
+      // Math.floor로 감싸줘서 0 ~ 10까지 랜덤 실수의 소수점 이하를 떼어 정수를 반환
+      console.log(random);
     </script>
   </body>
 </html>
