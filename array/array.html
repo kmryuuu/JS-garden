@@ -56,6 +56,16 @@
       // 음수인 경우 뒤에서 부터
       sliceArr.slice(-1);
       console.log(sliceArr); // [1, 2]
+
+      // sort() : 원본 배열의 요소를 정렬하여 배열로 반환한다.
+      const fruits = ["Banana", "Orange", "Apple"];
+      fruits.sort();
+      console.log(fruits); // ['Apple', 'Banana', 'Orange'], 기본적으로 오름 차순으로 정렬
+
+      // map() : 콜백 함수의 반환값들로 구성된 새로운 배열을 반환한다.
+      const arr2 = [1, 3, 5, 7];
+      const arrMap = arr.map((item) => item * 3);
+      console.log(arrMap);
     </script>
   </body>
 </html>
