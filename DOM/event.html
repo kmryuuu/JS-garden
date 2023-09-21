@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .bc-color {
+        background-color: dodgerblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 버튼을 누르면 배경 색이 바뀌게 하는 Event -->
+    <h1 class="main-title">Event</h1>
+    <button class="btn">클릭하세요!</button>
+
+    <script>
+      const btnColor = document.querySelector(".btn");
+      const mainTit = document.querySelector(".main-title");
+      function btnClickHandler() {
+        mainTit.classList.add("bc-color");
+      }
+      btnColor.addEventListener("click", btnClickHandler);
+
+      // 이벤트를 발생할 객체에 addEventListener() 메서드를 실행하고
+      // 매개변수에 첫 번째 인자로는 이벤트 이름, 두 번째는 이벤트가 발생 됐을때 실행할 함수를 넣어준다.
+    </script>
+  </body>
+</html>

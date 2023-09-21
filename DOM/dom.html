@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
+    <style>
+      .link-google {
+        color: red;
+      }
+      .special {
+        background-color: pink;
+      }
+    </style>
   </head>
 
   <body>
@@ -12,10 +20,10 @@
       DOM (Documnet Object Model)
       <small>small</small>
     </h1>
-    <ul>
+    <ul class="ilbuni-mom">
       <li class="ilbuni">
         <p>일분이 1</p>
-        <a href="https://google.com">Google</a>
+        <a class="link-google" href="https://google.com">Google</a>
       </li>
     </ul>
     <script>
@@ -24,13 +32,29 @@
       // 모두 찾기 위해서는 All을 붙여주면 된다.
       //   var libuni = document.querySelectorAll(".libuni");
       //   console.log(ilbuni[1]);
+
       // 어떤 속성의 값을 얻어오거나 세팅해 주는 거
       var link = document.querySelector(".ilbuni a");
-      // 값을 가져오는거
+      // getAttribute : 값을 가져오는거
       console.log(link.getAttribute("href"));
-      // 세팅해주는거 (바꾸는 값 이름, 바꿀 값)
+      // getSetAttribute : 세팅해주는거 (바꾸는 값 이름, 바꿀 값) -> 리턴 값이 없어서 undefined 나옴
       link.setAttribute("href", "https://naver.com");
       console.log(link.getAttribute("href"));
+
+      // class를 넣어주고 빼는거
+      link.classList.add("special");
+      setTimeout(function () {
+        link.classList.remove("link-google");
+      }, 2000);
+      // class가 있는지 없는지 true, false로 나타낸다.
+      console.log(link.classList.contains("special"));
+
+      // li 태그 생성하기
+      var listElem = document.createElement("li");
+      listElem.innerHTML = "<span>일분이2</span>";
+      // 만든 li 태그를 넣어주기 (해당 부모에 자식으로 넣어줘야해서 해당 부모를 선택해야한다.)
+      var ilbuniMom = document.querySelector(".ilbuni-mom");
+      ilbuniMom.appendChild(listElem);
     </script>
   </body>
 </html>
