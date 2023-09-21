@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+      const fruit = ["apple", "banana", "cherry"];
+      console.log(fruit[2]);
+
+      const apple = {
+        color: "red",
+        shape: "circle",
+        taste: "sweet",
+      };
+      // 객체를 읽는 방법 : 객체는 . 으로도 접근 할 수 있고, []로도 접근할 수 있다.
+      console.log(apple["shape"]);
+      console.log(apple.shape);
+
+      // 객체에 값을 추가하는 방법
+      apple.sort = "fruit";
+
+      // 객체에 값을 삭제하는 방법
+      delete apple.sort;
+      console.log(apple);
+
+      // 객체에서 사용되는 건 for in 문
+      // let name 자리 : 객체가 반복될 때 마다 순번에 해당되는 이름이 이 변수에 저장된다.
+      for (let name in apple) {
+        //[name]에 있는 값이 배열로 된다.
+        console.log(name, apple[name]);
+      }
+
+      // 객체에 소속되어 있는 함수()는 메서드라고 한다.
+      const myMath = {
+        random: function () {
+          return Math.random();
+        },
+      };
+      console.log(myMath.random());
+    </script>
+  </body>
+</html>
