@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style></style>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="hello">안녕하세요!</h1>
+    </header>
+    <script>
+      const txtHello = document.querySelector('.hello');
+      const baseColor = '#0040FF';
+      const otherColor = '#FF0000';
+
+      function clickHandler() {
+        const currentColor = txtHello.style.color;
+        if (currentColor === baseColor) {
+          txtHello.style.color = otherColor;
+        } else {
+          txtHello.style.color = baseColor;
+        }
+      }
+
+      function init() {
+        txtHello.style.color = baseColor;
+        txtHello.addEventListener('click', clickHandler);
+      }
+    </script>
+  </body>
+</html>
