@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .hello {
+        color: dodgerblue;
+        cursor: pointer;
+      }
+      .clicked {
+        color: pink;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="hello">안녕하세요!</h1>
+    </header>
+
+    <script>
+      const clicked = document.querySelector('.hello');
+
+      function clickedColor() {
+        clicked.classList.toggle('clicked');
+      }
+
+      clicked.addEventListener('click', clickedColor);
+    </script>
+  </body>
+</html>
