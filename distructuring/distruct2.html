@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+      const obj = { food1: '과일', food2: '채소', food3: '육류' };
+      function objReturn() {
+        return obj;
+      }
+      // 객체를 반환하는 함수가 있을 때, 반환 값을 바로 디스트럭쳐링한다.
+      const { food1, food2, food3 } = objReturn();
+      console.log(food1, food2, food3);
+    </script>
+  </body>
+</html>

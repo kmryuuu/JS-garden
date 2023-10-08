@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+      // 배열 예시
+      // 전개 구문 : 배열, 객체를 쉽게 복사하거나, 새로운 배열, 객체를 생성
+      const fruits = ['사과', '바나나', '딸기'];
+      const fishes = ['고등어', '갈치', '조기'];
+      const spread = [...fruits, ...fishes];
+      console.log(spread);
+
+      // 기존의 전개 구문을 이용해서 배열을 복사해 새로운 배열을 만든다.
+      const fruits2 = [...fruits];
+      fruits2.push('레몬');
+      console.log(`${fruits2} 와 ${fruits}`);
+
+      // 객체 예시
+      // 같은 이름의 key는 나중에 온 객체의 키 값으로 업데이트 된다.
+      const me = { name: 'ryu', address: 'seoul' };
+      const newAddress = { address: 'busan' };
+      const newMe = { ...me, ...newAddress };
+      console.log(newMe);
+    </script>
+  </body>
+</html>
